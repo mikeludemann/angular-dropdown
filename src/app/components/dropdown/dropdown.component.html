@@ -1,0 +1,22 @@
+<div #dropdown class="dropdown" [ngStyle]="dropdown" (mouseover)="isVisible(true)" (mouseout)="isVisible(false)">
+	<button class="dropbtn" [ngStyle]="dropbtn">{{this.textbutton}}</button>
+	<div class="dropdown-content" [ngStyle]="dropdown_content">
+		<div #second class="dropdown-sub" [ngStyle]="dropdown" (mouseover)="isVisibleTwo(true)" (mouseout)="isVisibleTwo(false)">
+			<a href="#" [ngStyle]="link">Link 1</a>
+			<div class="dropdown-content-sub" [ngStyle]="dropdown_content_sub">
+				<div #third class="dropdown-sub" [ngStyle]="dropdown" (mouseover)="isVisibleThree(true)" @mouseleave="isVisibleThree(false)">
+					<a href="#" [ngStyle]="link">Link 1.1</a>
+					<div class="dropdown-content-sub" [ngStyle]="dropdown_content_sub_next">
+						<a href="#" [ngStyle]="link">Link 1.1.1</a>
+						<a href="#" [ngStyle]="link">Link 1.1.2</a>
+						<a href="#" [ngStyle]="link">Link 1.1.3</a>
+					</div>
+				</div>
+				<a href="#" [ngStyle]="link">Link 1.2</a>
+				<a href="#" [ngStyle]="link">Link 1.3</a>
+			</div>
+		</div>
+		<a href="#" [ngStyle]="link">Link 2</a>
+		<a href="#" [ngStyle]="link">Link 3</a>
+	</div>
+</div>
